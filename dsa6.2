@@ -1,0 +1,48 @@
+# Stack implementation using Array
+
+stack = []
+
+while True:
+    print("\n----- STACK OPERATIONS -----")
+    print("1. Push")
+    print("2. Pop")
+    print("3. Peek")
+    print("4. Display")
+    print("5. Exit")
+
+    choice = int(input("Enter your choice: "))
+
+    # Push
+    if choice == 1:
+        value = int(input("Enter value: "))
+        stack.append(value)
+        print(value, "pushed into stack")
+
+    # Pop
+    elif choice == 2:
+        if len(stack) == 0:
+            print("Stack Underflow")
+        else:
+            print("Popped:", stack.pop())
+
+    # Peek
+    elif choice == 3:
+        if len(stack) == 0:
+            print("Stack is empty")
+        else:
+            print("Top element:", stack[-1])
+
+    # Display
+    elif choice == 4:
+        if len(stack) == 0:
+            print("Stack is empty")
+        else:
+            print("Stack:", stack[::-1])
+
+    # Exit
+    elif choice == 5:
+        print("Program exited.")
+        break
+
+    else:
+        print("Invalid choice")
